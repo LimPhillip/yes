@@ -1,0 +1,17 @@
+               
+   *배경 이미지 전체 화면 넣는법
+               
+      <style>     
+        body{   background-image:url("../ch06/top.jpg");
+                 background-repeat : no-repeat;  
+                 background-size : cover; 
+                body{ 
+      </style>    
+
+
+
+       * 배경 색상 넣기 
+     <style>          
+           body{ background-color : rgb(255,0,0,0.5); }
+                                          c1, fd, f4, 불투명도
+           </style>            

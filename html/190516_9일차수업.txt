@@ -1,0 +1,104 @@
+폼태그  form태그
+<form> : 사용자가 값을 입력할 수 있는태그 (검색창, 회원가입, 로그인, 장바구니, 게시판글쓰기, 댓글달기)
+
+<form>  기본3가지태그
+   1. <input> 인풋태그
+   2. <select> 셀렉트 옵션태그 (펼침메뉴 또는 옵션메뉴)
+          <option></option>
+       </select>
+   3. <textarea></textarea> 텍스트에이리어  **<textarea cols="30"rows="5"> 가로행30 세로행5줄(잘안쓰고 css로함)
+
+입력양식관련 태그들의 속성사용법
+
+1. form태그의 속성
+  1) method속성 : 입력값 전달방식 (get노출/post숨김)    *링크에 나타나는지 
+  2) action 속성 : 입력값 전달할 페이지(또는 파일명)     
+  3) enctype 속성 : 전달할 값이 파일일 경우 사용
+
+]2. input 태그의속성 (적는 사각형을 만들어줌)
+  1) type: 입력값 형태 설정
+  2) name: 입력값을 전달할 때 사용하는 이름 (전송할 데이터의이름)
+  3) value : 수동으로 입력값을 지정할 때 사용   * 모든데이터의 자료형은 문자형! ㅖ( 실제데이터)
+
+ *******<form method="post"  action="http://www.naver.com">
+ *******  ID  <input type="text" name="userID" value="ysk2255">
+전달방식 : method  (  -노출: get   -숨김: post)
+*대문자를 적었을시 똑같이 적어야 적용됨
+
+수신페이지
+    action *현제페이지에서 숨김형식으로 네이버에게 전달
+-----------------------------------------------------------------------------------------
+
+데이터전달: html 파일에서가능함
+데이터수신: html 파일에서 불가능함  (html파일이 서버에서 실행되는파일이아님)
+데이터수신이 가능한 파일종류 - ASP, ASP.net :  IIS 웹서버설치
+                                        - PHP : Apache 웹서버설치, APM 프로그램설치
+                                        - JSP : Tomcat 웹컨테이너설치, JDK,Java프로그램
+----------------------------------------------------------------------------------------
+****css 의 숨김주석   /*   */      html숨김주석 <!--  -->
+
+----------------------------------------------------------------------------------------
+ID <input type="text"  name="userID" ><br>
+          비밀번호 <input type="password"  name="userPW" ><br>
+          라디오버튼<br>
+             1번   <input type="radio" name="rdo">   <!--단, name동일해야함-->
+             2번   <input type="radio" name="rdo"> 
+             3번   <input type="radio" name="rdo"> 
+             <br>
+          체크박스<br>
+            1번 <input type="checkbox" name="cb">
+            2번 <input type="checkbox" name="cb">
+            3번 <input type="checkbox" name="cb">
+            <br>
+          파일 <input type="file" name=""><br>
+          버튼<input type="button" value="버튼기능없음"><br>
+          리셋<input type="reset"><br>     <!--최초의값으로돌아감-->
+          히든<input type="hidden">왼쪽에 히든있음<br>   <!--개발자들이씀-->
+
+----------------------------------------------------------------------------------------
+한개의<form>내부에서 radio버튼과 checkbox버튼차이점 : 다중선택 가능여부
+radio버튼 : 불가능 (단일선택만됨, 단 name이 동일해야함)
+checkbox버튼: 가능(다중선택가능함)
+----------------------------------------------------------------------------------------
+
+<input type="file">에서 주의점 
+
+   1. <form method="post">만 사용가능함. 즉, get으로 전송할 수 없음
+       (get방식은 전송데이터 용량이 1Kbyte로 제한되어 있으나, post방식은 하드디스크용량과 동일함)
+
+   2. <form method="post"  action="URL"  enctype="multipart/form-data">
+       **enctype="multipart/form-data   속성을 반드시기재해야함
+
+----------------------------------------------------------------------------------------
+   <input type="button">은 html에서 자체적으로 사용하는 일은 없음
+      * Javascript 또는 jQquert를 사용할때 필요한 버튼
+
+    ***<button>버튼입니다</button>  (input type 안쓰고 이거사용)
+    ***<button type="submit">버튼입니다</button>  (초기화버튼기능)
+
+
+----------------------------------------------------------------------------------------
+ <label>태그 : 특정태그를 선택하여 선택하여 지정하는 태그
+    ex ) <label for="idFocus">ID</label> 
+          <input type="text"  name="userID" id="idFocus">    (포커스를 지정하면 누르면 자동선택)
+----------------------------------------------------------------------------------------
+ 체크박스 / 라디오버튼 테두리지정 (영역을 시간적으로 쉽게 구분할 수 있음)
+ <fieldset> - 테두리
+   <legend>캡션</legend>  -테두리에 표시된 안내구문
+    체크박스 목록또는 라디오버튼목록
+  </fieldset>
+
+
+  ex)   <fieldset>
+          <legend>캡션</legend> 
+           <label for="rdo01"> 1번</label>   <!--단,label글자를 눌러도선택됨-->
+            <input type="radio" name="rdo" id="rdo01">   <!--단, name동일해야함-->
+            
+             2번   <input type="radio" name="rdo"> 
+             3번   <input type="radio" name="rdo"> 
+        </fieldset>    
+      
+          체크박스<br>
+            1번 <input type="checkbox" name="cb">
+            2번 <input type="checkbox" name="cb">
+            3번 <input type="checkbox" name="cb

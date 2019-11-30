@@ -1,0 +1,18 @@
+2. 셀렉트태그(옵션태그)
+<select name="meun"> 셀렉트 옵션태그 (펼침메뉴 또는 옵션메뉴)
+         <option value="cal">칼국수</option>
+          <option>갈비</option>
+   </select>
+
+3. 텍스트에이리어태그 
+  <textarea name="content"> 요기가 벨류 </textarea>
+
+------------------------------------------------------------------------------------------------
+<label for="idFocus"> ID </label>
+               <input type="text" id="idFocus" name="userID"
+                 required       placeholder="아이디는 6글자이상 영어숫자"
+                 size="20"  maxlength="10"  minlength
+                 > 
+          ***required는경고문,  ***placeholder옅은글자   ***사이즈는기본 20, 
+        ***maxlength최대 글자의갯수, minlength최소 글자의갯수(익스플로어에서 적용안되서 안씀)
+      **   readonly읽기전용

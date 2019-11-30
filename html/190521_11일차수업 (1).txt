@@ -1,0 +1,79 @@
+[CSS(스타일)사용하는 이유] - 레이아웃과 디자인을 적용하여 HTML파일의 나용을
+효율적으로 사용자에게 전달하기 위함. 
+                                       1. 배치와 구조, 일정(레이아웃),내용전달
+                                       2. 디자인(글꼴, 색상,크기,형태, 모양)
+
+
+[CSS사용법]     
+1. 다이렉트 CSS  : HTML태그의 속성으로 사용함
+   <!--다이렉트 css사용하여 밑줄-->
+     <p style="text-decoration : underline;">
+  
+       AB </p >
+
+2. 인라인 CSS : HTML 태그중에서 <stlye>태그를 사용
+ 
+**** [인라인 css사용법]
+ 1. CSS 사용할 HTML 태그선정  : ex) ul태그선정
+ 
+ 2. CSS적용할 내용 선정 : ex) 비순서항목의 나타나는 점을 제거
+ 
+ 3. <style> 태그생성  : <head>태그 내부, <title>태그 아래에 생성 
+ 
+ 4. <style> 태그내부에 1번에서 선정한태그를 선택자로 기재함
+    : <style>
+          ul {
+       </style>
+     ** 바로 위에 있는 ul을 선택자라고 하며 줄여서 선택자(=selector)라고함   
+ 
+ 5. 2번에서 선정한 적용내용을   {CSS속성:CSS속성값;}  형태로기재함
+   : ex)비순서항목 점을제거하는 { list-style-type:none;}, 사각형점:square; ,동그라미점 circle;
+                그림을 넣을떄 {list-style-image : url("fef.PNG");}
+
+
+3. 외부파일 형태 CSS : CSS 내용을 별도의 파일에 저장한 후 HTML 태그에서
+                             <link rel="..."> 태그를 사용하여 외부파일연동 
+
+     <!--외부파일형태CSS 사용-->
+         <link rel="stylesheet"
+                 href="testCss.css">
+
+    파일 test.css 로만들어서  p{ /*인라인 스타일시트*/
+                                        color: red;
+	                           text-align: center; text-decoration:underline;  }
+     -----------------------------------------------------------------------------------------------------    
+
+[CSS 구조]
+  = CSS속성 : CSS속성값;
+ 1) 텍스트정렬(오른쪽정렬 )  text-align : right;
+ 2) 사용예시_ 초록색 글자색 적용   color:green;
+ 3) 글자의 밑줄긋기  texe-decoration : underline;
+
+----------------------------------------------------------------------------------------------------- 
+* CSS 내용을 구분짓기위함
+[ Box Model(박스모델)]
+ 
+1. Contents(내용 컨텐츠)
+   1)글자색 : color : blue;
+   2)글자크기 : font-size : large;
+   3)글자진하기 : font-weight : bold;    (보통은 normal;)
+   4)밑줄 : text-decoration : underline;
+   5)취소선 : text-decoration : line-through;
+   6)글꼴 : font-family : "Nanum Gothic", sans-serif;   (cf.CDN을 사용해야함)
+   7)정렬 : text-align : center;
+   8)글자모양 : font-style: italic;
+ 
+
+ 2. Border( 테두리선 보더)
+   1) boder : 1px solid black;
+   2) boder, padding, margin 은 방향이 존재함 Top → Right →Bottom→Left
+      1개만 쓰면 4방향 모두 동일 설정, 기재하지 않은 방향은 대칭되는 방향의 값을 적용함
+
+ 3. Padding( 내부여백, 패딩) 
+      : 눈에 보이지 않고 공간의 크기만 존재함 + 테두리선과 마찬가지로 방향을 갖고있음
+      padding: 20px 0px;  →  Top과 Right만 설정되었으므로 매치되는 방향은
+      Bottom은 Top의값 적용 ,  left는 Right의 값 적용 margin도 동일함
+
+4. Margin(외부여백,마진)
+ 
+             
